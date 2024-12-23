@@ -50,9 +50,9 @@ const About = () => {
                     <img 
                         src="/images/Logo.svg" 
                         alt="Logo"
-                        width={30}
-                        height={30} 
-                        className="ml-auto md:w-[40px] md:h-[40px]"
+                        width={60}
+                        height={60} 
+                        className="ml-auto md:w-[100px] md:h-[100px]"
                     />
                 </div>
             </div>
