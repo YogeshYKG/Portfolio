@@ -14,7 +14,7 @@ import './index.css'
 import 'lenis/dist/lenis.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode basename={import.meta.env.basename}>
+  <StrictMode>
     <App />
   </StrictMode>,
 )
