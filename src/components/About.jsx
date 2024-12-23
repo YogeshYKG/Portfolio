@@ -48,7 +48,7 @@ const About = () => {
                         ))
                     }
                     <img 
-                        src="/images/Logo.svg" 
+                        src={import.meta.env.BASE_URL + "/images/Logo.svg"} 
                         alt="Logo"
                         width={60}
                         height={60} 
