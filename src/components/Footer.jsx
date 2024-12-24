@@ -131,7 +131,7 @@ const Footer = () => {
                     className="logo reveal-up"
                 >
                     <img 
-                        src={import.meta.env.BASE_URL +"/images/Logo.svg"}
+                        src={"/images/Logo.svg"}
                         width={80}
                         height={80} 
                         alt="Logo"  

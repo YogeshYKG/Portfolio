@@ -40,7 +40,7 @@ const ReviewCard = ({
         <div className="flex items-center gap-2 mt-auto">
             <figure className="img-box rounded-lg">
                 <img 
-                    src={import.meta.env.BASE_URL + imgSrc} 
+                    src={imgSrc} 
                     alt={name}
                     width={44}
                     height={44}

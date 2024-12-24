@@ -23,7 +23,8 @@ const Header = () => {
           md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
               <h1>
                   <a href="/" className="logo">
-                      <img src={import.meta.env.BASE_URL +"/images/Logo.svg"} width={80}  height={80} alt="Yogesh Gupta" />
+                  {/* import.meta.env.BASE_URL + */}
+                      <img src={"/images/Logo.svg"} width={80}  height={80} alt="Yogesh Gupta" />
                   </a>
               </h1>
   
