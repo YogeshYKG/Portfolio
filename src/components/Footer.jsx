@@ -1,5 +1,5 @@
 /**
- * @copyright 2024 codewithgyogesh
+ * @copyright 2024 YogeshYKG
  * @license Apache-2.0
  */
 
@@ -42,11 +42,11 @@ const sitemap = [
     },
     {
       label: 'Twitter X',
-      href: 'https://x.com/codewithgyogesh'
+      href: 'https://x.com/YogeshYKG'
     },
     {
       label: 'CodePen',
-      href: 'https://codepen.io/codewithgyogesh'
+      href: 'https://codepen.io/YogeshYKG'
     },
     {
         label: 'LeetCode',
@@ -139,7 +139,7 @@ const Footer = () => {
                 </a>
 
                 <p className="text-zinc-500 text-sm reveal-up">
-                    &copy; 2024 <span className="text-zinc-200">codewithgyogesh</span>
+                    &copy; 2024 <span className="text-zinc-200">YogeshYKG</span>
                 </p>
             </div>
 
