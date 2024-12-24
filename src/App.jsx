@@ -26,6 +26,8 @@ import Work from "./components/Work";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { element } from 'prop-types';
+import { RouterProvider } from 'react-router-dom';
 
 const App = () => {
     useGSAP(()=>{
@@ -46,7 +48,28 @@ const App = () => {
         });
     });
 
+
+// /** Creating Routes */
+// import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+// const router = createBrowserRouter(
+//     [
+//         {
+//             path: '/hero',
+//             element: <Hero />
+//         },
+//         {
+//             path: '/about',
+//             element: <About />
+//         },
+//         {
+//             // .. other routes
+//         },
+//     ]
+// );
+
     return (
+        // <RouterProvider router={router}/>
         <ReactLenis root>
             <Header />
             <main>
