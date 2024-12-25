@@ -5,15 +5,35 @@
 
 /** Node Module */
 import PropTypes from "prop-types";
+import { useEffect, useRef } from "react";
 
 
 const WorkCard = ({
+
     imgSrc, 
     title,
     tags,
     projectLink,
     classes
 }) => {
+    const imgRef = useRef(null);
+    useEffect(() => { 
+        const imgElement = imgRef.current;
+        let interval;
+        const playGift = () => {
+            imgElement.src = imgSrc;
+        };
+        const pauseGif = () => {
+            imgElement.src = imgSrc;
+        };
+        interval = setInterval(() => {
+            playGift();
+            setTimeout(pauseGif, 3000);
+        }, 2000);
+
+    }, [imgRef]);
+
+const isGitRepo = projectLink.includes('github.com');
   return (
     <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
         <figure className="img-box aspect-square rounded-lg mb-4">
@@ -47,7 +67,7 @@ const WorkCard = ({
                     className="material-symbols-rounded"
                     aria-hidden="true"
                 >
-                    arrow_outward
+                    {isGitRepo? 'code_branch' : 'arrow_outward'}
                 </span>
             </div>
         </div>
