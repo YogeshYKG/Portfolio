@@ -26,6 +26,7 @@ import Work from "./components/Work";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MyApps from "./components/MyApps";
 import { element } from 'prop-types';
 import { RouterProvider } from 'react-router-dom';
 
@@ -76,6 +77,7 @@ const App = () => {
                 <Hero />
                 <About />
                 <Skills />
+                <MyApps />
                 <Work />
                 <Review />
                 <Contact />

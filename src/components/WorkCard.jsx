@@ -7,7 +7,7 @@
 import PropTypes from "prop-types";
 
 
-const ProjectCard = ({
+const WorkCard = ({
     imgSrc, 
     title,
     tags,
@@ -64,7 +64,7 @@ const ProjectCard = ({
   )
 }
 
-ProjectCard.PropTypes = {
+WorkCard.PropTypes = {
     imgSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired, 
@@ -72,4 +72,4 @@ ProjectCard.PropTypes = {
     classes:  PropTypes.string
 }
 
-export default ProjectCard
+export default WorkCard
