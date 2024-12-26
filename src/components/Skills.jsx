@@ -77,7 +77,10 @@ const skillItem = [
 
 const Skills = () => {
   return (
-    <section className="section">
+    <section 
+      id="Skills"
+      className="section"
+    >
         <div className="container">
 
             <h2 className="headline-2 reveal-up ">

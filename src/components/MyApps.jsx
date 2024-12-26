@@ -39,8 +39,11 @@ const MyApps = () => {
         setSelectedIframe(null); // Close the iframe when clicked outside or on close button
     };
   return (
-    <section className="section">
-            <div className="container">
+    <section
+        id="MyApps" 
+        className="section"
+    >
+             <div className="container">
     
                 <h2 className="headline-2 reveal-up">
                     My Apps, Tools & Project Ideas
