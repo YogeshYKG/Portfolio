@@ -25,13 +25,9 @@ const MyAppItemCard = ({
       <div className="">
         <div className="">
           <div 
-              className={`relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors ${classes}`}
+              className={`relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors bg-cover bg-center-right bg-top  h-full min-h-[20rem]`}
               style={{
                   backgroundImage: `url(${imgSrc})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  height: '100%',
-                  minHeight: '20rem',
                   
               }}
               onMouseEnter={() => setIsHovered(true)}
