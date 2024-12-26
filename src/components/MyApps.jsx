@@ -6,17 +6,38 @@
 
 /** Component */
 import MyAppItemCard from "./MyAppItemCard";
+import MyAppItemCardIframe from "./MyAppItemCardIframe";
+
+
+import React, { useState } from "react";
+
 
 const appitemcard = [
     {
-      iframeSrc: '/images/Icons/figma.svg',
-      imgSrc: '/images/Icons/figma.svg',
+      iframeSrc: 'https://paste-app-gilt-two.vercel.app',
+      imgSrc: '/images/MyAppItem/PasteApp.png',
       label: 'PasteApp',
-      desc: 'Vite Ract JS App'
+      desc: 'Vite Ract JS App',
+      tags: [
+        'Vite',
+        'Raect',
+        'JS',
+        'PasteApp',
+      ],
     },
 ];
 
 const MyApps = () => {
+
+    const [selectedIframe, setSelectedIframe] = useState(null);
+
+    const handleCardClick = (iframeSrc) => {
+        setSelectedIframe(iframeSrc); // Set iframe source when card is clicked
+    };
+
+    const handleCloseIframe = () => {
+        setSelectedIframe(null); // Close the iframe when clicked outside or on close button
+    };
   return (
     <section className="section">
             <div className="container">
@@ -31,14 +52,16 @@ const MyApps = () => {
     
                 <div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
                     {
-                        appitemcard.map(({ imgSrc, iframeSrc , label, desc }, key) => (
+                        appitemcard.map(({ imgSrc, iframeSrc , label, desc, tags }, key) => (
                         <MyAppItemCard 
                             key={key}
                             imgSrc={imgSrc}
-                            iframeSrc={iframeSrc}
+                            iframeSrc={iframeSrc}   
                             label={label}
                             desc={desc}
+                            tags={tags}
                             classes="reveal-up"
+                            onCardClick={handleCardClick}
                         />
                         ))
                     }
@@ -47,6 +70,13 @@ const MyApps = () => {
     
     
             </div>
+
+            {selectedIframe && (
+                <MyAppItemCardIframe 
+                    iframeSrc={selectedIframe}
+                    onClose={handleCloseIframe} 
+                />
+            )}
         </section>
   )
 }

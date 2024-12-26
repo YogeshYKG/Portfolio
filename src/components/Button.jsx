@@ -106,7 +106,7 @@ const ButtonOutline = ({
     }
 }
 
-ButtonOutline.PropTypes = {
+ButtonOutline.propTypes = {
     label: PropTypes.string.isRequired,
     href: PropTypes.string,
     target: PropTypes.string,
