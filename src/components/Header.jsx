@@ -11,14 +11,39 @@ import Navbar from "./Navbar";
 /**
  * Node Modules
  */
-import { useState } from "react";
+import React,{ useState, useEffect } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+
 
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+      const previous = scrollY.getPrevious();
+      if (latest > previous && latest > 200) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+    });
+
 
     return (
-      <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
+      <div className="scrollMotion">
+        <motion.header 
+          variants={
+            {
+              hidden: {y: -100},
+              visible: {y: 0}
+            }
+          }
+          animate={hidden? "hidden" : "visible"}
+          transition={{duration: 0.5, ease: 'easeInOut'}}
+          className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0"
+        >
           <div className="max-w-screen-2xl w-full mx-auto px-4 flex items-center justify-between
           md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
               <h1>
@@ -37,7 +62,7 @@ const Header = () => {
                         {navOpen?'close':'menu'}
                       </span>
                   </button>
-                  <Navbar navOpen={navOpen}/>
+                  { !hidden && <Navbar navOpen={navOpen}/>}
               </div>
   
               <a 
@@ -50,7 +75,8 @@ const Header = () => {
   
   
           </div>
-      </header>
+      </motion.header>
+      </div>
     )
   }
   
