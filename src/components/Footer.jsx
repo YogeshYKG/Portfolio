@@ -18,6 +18,14 @@ const sitemap = [
       href: '#about'
     },
     {
+        label: 'Skills',
+        href: '#Skills'
+    },
+    {
+        label: 'MyApps',
+        href: '#MyApps'
+    },
+    {
       label: 'Work',
       href: '#work'
     },
@@ -75,53 +83,58 @@ const Footer = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 lg:pl-20 ">
-
-                    <div>
-                        <p className="mb-2 reveal-up">
-                            Sitemap
-                        </p>
-
-                        <ul>
-                            {sitemap.map(({ label, href },key)=>(
-                                <li 
-                                    key={key}
-                                >
-                                    <a 
-                                        href={href} 
-                                        className="block text-sm  text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                    <div className="grid grid-cols-2 gap-4 lg:pl-20">
+                        {/* Sitemap Section */}
+                        <div>
+                            <div className="grid grid-cols-2 gap-2">
+                            <p className="reveal-up col-span-2 justify-self-center transform scale-x-125 scale-y-120 ">Sitemap</p>
+                            <ul>
+                                {sitemap.slice(0, Math.ceil(sitemap.length / 2)).map(({ label, href }, key) => (
+                                <li key={key}>
+                                    <a
+                                    href={href}
+                                    className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                                     >
-                                        {label}
+                                    {label}
                                     </a>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p className="mb-2 reveal-up">
-                            Socials
-                        </p>
-
-                        <ul>
-                            {socials.map(({ label, href },key)=>(
-                                <li 
-                                    key={key}
-                                >
-                                    <a 
-                                        href={href}
-                                        target="_blank" 
-                                        className="block text-sm  text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                                ))}
+                            </ul>
+                            <ul>
+                                {sitemap.slice(Math.ceil(sitemap.length / 2)).map(({ label, href }, key) => (
+                                <li key={key}>
+                                    <a
+                                    href={href}
+                                    className="block justify-self-end text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                                     >
-                                        {label}
+                                    {label}
                                     </a>
                                 </li>
-                            ))}
-                        </ul>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
+                    {/* Socials Section */}
+                    <div className="pl-10">
+                        <p className="mb-2  reveal-up">Socials</p>
+                        <ul>
+                        {socials.map(({ label, href }, key) => (
+                            <li key={key}>
+                            <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                            >
+                                {label}
+                            </a>
+                            </li>
+                        ))}
+                        </ul>
+                    </div>
+                    </div>
 
-                </div>
 
             </div>
 

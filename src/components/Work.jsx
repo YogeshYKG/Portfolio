@@ -4,7 +4,7 @@
  */
 
 /** Components */
-import ProjectCard from "./ProjectCard";
+import WorkCard from "./WorkCard";
 
 const works = [
     {
@@ -42,7 +42,7 @@ const Work = () => {
             </h2>
             <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                 {works.map(({ imgSrc, title, tags, projectLink }, key) => (
-                    <ProjectCard 
+                    <WorkCard 
                         key={key}
                         imgSrc={imgSrc}
                         title={title}
