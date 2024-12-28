@@ -67,7 +67,7 @@ MyAppItemCard.propTypes = {
     label: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired, 
-    classes: PropTypes,
+    classes: PropTypes.string,
     onCardClick: PropTypes.func.isRequired
 };
 

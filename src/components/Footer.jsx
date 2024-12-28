@@ -7,6 +7,7 @@
  * Components
  */
 import { ButtonPrimary } from "./Button";
+import Reveal from "./utils/Reveal";
 
 const sitemap = [
     {
@@ -70,9 +71,11 @@ const Footer = () => {
 
             <div className="lg:grid grid-cols-2">
                 <div className="mb-10">
+                    <Reveal>
                     <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
                         Let&apos;s work together today!
                     </h2>
+                    </Reveal>
 
                     <ButtonPrimary 
                         href="mailto:guptayogesh484.00@gmail.com"
@@ -87,28 +90,36 @@ const Footer = () => {
                         {/* Sitemap Section */}
                         <div>
                             <div className="grid grid-cols-2 gap-2">
-                            <p className="reveal-up col-span-2 justify-self-center transform scale-x-125 scale-y-120 ">Sitemap</p>
+                            <p className="reveal-up col-span-2 justify-self-center transform scale-x-125 scale-y-120 ">
+                              <Reveal>
+                              Sitemap
+                              </Reveal>
+                            </p>
                             <ul>
                                 {sitemap.slice(0, Math.ceil(sitemap.length / 2)).map(({ label, href }, key) => (
                                 <li key={key}>
+                                    <Reveal>
                                     <a
                                     href={href}
                                     className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                                     >
                                     {label}
                                     </a>
+                                    </Reveal>
                                 </li>
                                 ))}
                             </ul>
                             <ul>
                                 {sitemap.slice(Math.ceil(sitemap.length / 2)).map(({ label, href }, key) => (
                                 <li key={key}>
+                                    <Reveal>
                                     <a
                                     href={href}
                                     className="block justify-self-end text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                                     >
                                     {label}
                                     </a>
+                                    </Reveal>
                                 </li>
                                 ))}
                             </ul>
@@ -117,10 +128,15 @@ const Footer = () => {
 
                     {/* Socials Section */}
                     <div className="pl-10">
-                        <p className="mb-2  reveal-up">Socials</p>
+                        <p className="mb-2  reveal-up">
+                          <Reveal>
+                          Socials
+                          </Reveal>
+                        </p>
                         <ul>
                         {socials.map(({ label, href }, key) => (
                             <li key={key}>
+                            <Reveal>
                             <a
                                 href={href}
                                 target="_blank"
@@ -129,6 +145,7 @@ const Footer = () => {
                             >
                                 {label}
                             </a>
+                            </Reveal>
                             </li>
                         ))}
                         </ul>

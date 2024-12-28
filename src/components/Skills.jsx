@@ -5,6 +5,7 @@
 
 /** Component */
 import SkillCard from "./SkillCard";
+import Reveal from "./utils/Reveal";
 
 const skillItem = [
     {
@@ -83,12 +84,16 @@ const Skills = () => {
     >
         <div className="container">
 
+            <Reveal>
             <h2 className="headline-2 reveal-up ">
                 Essential Tools I use
             </h2>
+            </Reveal>
 
             <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+                <Reveal>
                 Discover the powerful tools and technologies I use to create exceptional, high-performing websites & applications.
+                </Reveal>
             </p>
 
             <div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">

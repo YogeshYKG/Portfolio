@@ -4,6 +4,7 @@
  */
 
 /** Components */
+import Reveal from "./utils/Reveal";
 import WorkCard from "./WorkCard";
 
 const works = [
@@ -37,9 +38,11 @@ const Work = () => {
         id="work"
     >
         <div className="container ">
+            <Reveal>
             <h2 className="headline-2 mb-8 reveal-up">
                 My portfolio highlights
             </h2>
+            </Reveal>
             <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                 {works.map(({ imgSrc, title, tags, projectLink }, key) => (
                     <WorkCard 
