@@ -31,11 +31,9 @@ const About = () => {
         >
             <div className=" bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up ">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                <Reveal>
-                    <h4>Hi, I’m Yogesh!</h4>
-                    <h5>I’m a web developer with 2.5+ years of experience in building and optimizing dynamic web applications. Skilled in Angular, TypeScript, and AWS.</h5>
-                    <h5>I’m currently expanding my expertise with React and Tailwind CSS to enhance my frontend development capabilities. My focus is on crafting responsive, high-performance web solutions while collaborating with teams to bring innovative ideas to life.</h5>
-                </Reveal> 
+                <Reveal><h4>Hi, I’m Yogesh!</h4></Reveal>
+                <Reveal><h5>I’m a web developer with 2.5+ years of experience in building and optimizing dynamic web applications. Skilled in Angular, TypeScript, and AWS.</h5></Reveal>
+                <Reveal><h5>I’m currently expanding my expertise with React and Tailwind CSS to enhance my frontend development capabilities. My focus is on crafting responsive, high-performance web solutions while collaborating with teams to bring innovative ideas to life.</h5></Reveal>
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7">
