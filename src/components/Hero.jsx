@@ -5,6 +5,7 @@
 
 /** Import Components */
 import { ButtonPrimary, ButtonOutline } from "./Button"
+import Reveal from "./utils/Reveal"
 
 const Hero = () => {
   return (
@@ -28,13 +29,17 @@ const Hero = () => {
                         <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                             <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                         </span>
+                        <Reveal>
                         Available For Work
+                        </Reveal>
                     </div>
                 </div>
 
+                <Reveal>
                 <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-4 mb-8 lg:mb-10">
                     Building Scalable Modern Webpage For Future
                 </h2>
+                </Reveal>
                 <div className="flex items-center gap-3">
                     <a 
                         href="https://raw.githubusercontent.com/YogeshYKG/YogeshYKG/main/Yogesh_CV.pdf" 

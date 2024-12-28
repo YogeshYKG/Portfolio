@@ -10,6 +10,7 @@ import MyAppItemCardIframe from "./MyAppItemCardIframe";
 
 
 import React, { useState } from "react";
+import Reveal from "./utils/Reveal";
 
 
 const appitemcard = [
@@ -45,12 +46,16 @@ const MyApps = () => {
     >
              <div className="container">
     
+                <Reveal>
                 <h2 className="headline-2 reveal-up">
                     My Apps, Tools & Project Ideas
                 </h2>
+                </Reveal>
 
                 <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+                    <Reveal>
                     Discover the state-of-the-art apps, tools, and innovative project ideas I have developed to create superior, high-efficiency websites and applications.
+                    </Reveal>
                 </p>
     
                 <div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">

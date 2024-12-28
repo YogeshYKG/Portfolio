@@ -18,6 +18,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 /** Components */
 import ReviewCard from "./ReviewCard";
+import Reveal from "./utils/Reveal";
 
 const reviews = [
     {
@@ -81,9 +82,11 @@ const Review = () => {
     >
         <div className="container">
 
+            <Reveal>
             <h2 className="headline-2 mb-8 reveal-up">
                 What our customers say
             </h2>
+            </Reveal>
 
             <div className="scrub-slide flex items-stretch gap-3 w-fit ">
                 {reviews.map(({ content, name, imgSrc, company }, key) => (
