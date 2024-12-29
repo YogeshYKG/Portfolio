@@ -18,9 +18,11 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const appitemcard = [
     {
@@ -30,7 +32,7 @@ const appitemcard = [
       desc: 'Vite Ract JS App',
       tags: [
         'Vite',
-        'Raect',
+        'Raact',
         'JS',
         'PasteApp',
       ],
@@ -59,6 +61,18 @@ const appitemcard = [
           'PasteApp',
         ],
     },
+    {
+      iframeSrc: 'https://paste-app-gilt-two.vercel.app',
+      imgSrc: '/images/MyAppItem/PasteApp.png',
+      label: 'PasteApp',
+      desc: 'Vite Ract JS App',
+      tags: [
+        'Vite',
+        'Raect',
+        'JS',
+        'PasteApp',
+      ],
+    },
 ];
 
 const MyApps = () => {
@@ -66,7 +80,8 @@ const MyApps = () => {
     const [selectedIframe, setSelectedIframe] = useState(null);
 
     const handleCardClick = (iframeSrc) => {
-        setSelectedIframe(iframeSrc); // Set iframe source when card is clicked
+      const fallbackSrc = "https://default-fallback-url.example.com"; // Fallback URL
+      setSelectedIframe(iframeSrc || fallbackSrc); // Set iframe source when card is clicked
     };
 
     const handleCloseIframe = () => {
@@ -89,19 +104,20 @@ const MyApps = () => {
                     Discover the state-of-the-art apps, tools, and innovative project ideas I have developed to create superior, high-efficiency websites and applications.
                 </p>
                 </Reveal>
-    
+                {/* Swiper Slider for My Apps */}
                 <Swiper
-                    modules={[ EffectCoverflow, Pagination, Navigation]}
+                    modules={[ EffectCoverflow, Pagination, Navigation, Autoplay]}
                     effect="coverflow"
                     grabCursor={true}
                     centeredSlides={true}
+                    autoplay={{ delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true }}
                     // slidesPerView="auto"
                     loop={true}
                     // slidesPerView={3}
                     coverflowEffect={{
                         rotate: -30,
-                        stretch: 0,
-                        depth: 100,
+                        stretch: -20,
+                        depth: 200,
                         modifier: 1,
                         slideShadows: true,
                     }}
@@ -115,7 +131,7 @@ const MyApps = () => {
                           slidesPerView: 2,
                         },
                         1024: {
-                          slidesPerView: 2,
+                          slidesPerView: 1,
                         },
                     }}
                 >
@@ -128,6 +144,7 @@ const MyApps = () => {
                               label={label}
                               desc={desc}
                               tags={tags}
+                              alt={`Image of ${label}`}
                               classes="reveal-up"
                               onCardClick={handleCardClick}
                             />
