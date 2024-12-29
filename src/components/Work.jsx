@@ -37,7 +37,7 @@ const Work = () => {
         className="section"
         id="work"
     >
-        <div className="container ">
+        <div className="container pb-32">
             <Reveal>
             <h2 className="headline-2 mb-8 reveal-up">
                 My portfolio highlights

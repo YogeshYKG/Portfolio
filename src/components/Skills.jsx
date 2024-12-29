@@ -82,7 +82,7 @@ const Skills = () => {
       id="Skills"
       className="section"
     >
-        <div className="container">
+        <div className="container mx-auto py-12">
 
             <Reveal>
             <h2 className="headline-2 reveal-up ">

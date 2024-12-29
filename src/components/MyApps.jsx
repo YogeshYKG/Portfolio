@@ -92,7 +92,7 @@ const MyApps = () => {
         id="MyApps" 
         className="section"
     >
-             <div className="container">
+             <div className="container pb-32">
     
                 <Reveal>
                 <h2 className="headline-2 reveal-up">
@@ -100,7 +100,7 @@ const MyApps = () => {
                 </h2>
                 </Reveal>
                 <Reveal>
-                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up pb-32">
                     Discover the state-of-the-art apps, tools, and innovative project ideas I have developed to create superior, high-efficiency websites and applications.
                 </p>
                 </Reveal>
@@ -131,7 +131,7 @@ const MyApps = () => {
                           slidesPerView: 2,
                         },
                         1024: {
-                          slidesPerView: 1,
+                          slidesPerView: 2,
                         },
                     }}
                 >
