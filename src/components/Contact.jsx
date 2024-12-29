@@ -46,7 +46,7 @@ const Contact = () => {
         id="contact"
         className="section "
     >
-        <div className="container lg:grid lg:grid-cols-2 lg:items-stretch ">
+        <div className="container pb-32 lg:grid lg:grid-cols-2 lg:items-stretch ">
             <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
                 <Reveal>
                 <h2 className="headline-2 lg:max-w-[12ch] reveal-up">

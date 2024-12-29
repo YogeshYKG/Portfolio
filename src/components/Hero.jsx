@@ -13,7 +13,7 @@ const Hero = () => {
         id="home"
         className="pt-28 lg:pt-36"
     >
-        <div className="cointainer items-center lg:grid lg:grid-cols-2 lg:gap-10">
+        <div className="cointainer py-12 items-center lg:grid lg:grid-cols-2 lg:gap-10">
             <div>
                 <div className="flex items-center gap-3">
                     <figure className="img-box w-9 h-9 rounded-lg ">
