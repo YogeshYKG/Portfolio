@@ -29,7 +29,7 @@ const appitemcard = [
       iframeSrc: 'https://paste-app-gilt-two.vercel.app',
       imgSrc: '/images/MyAppItem/PasteApp.png',
       label: 'PasteApp',
-      desc: 'Vite Ract JS App',
+      desc: 'Vite React JS App',
       tags: [
         'Vite',
         'Raact',
@@ -41,7 +41,7 @@ const appitemcard = [
         iframeSrc: 'https://quote-generator-ecru-xi.vercel.app/',
         imgSrc: '/images/MyAppItem/quote-generator.png',
         label: 'Random-Quote-Generator',
-        desc: 'Vite Ract JS AppReact Quote Generator with API Fetches random quotes with Typewriter animation',
+        desc: 'Vite React JS App Quote Generator with API Fetches random quotes with Typewriter animation',
         tags: [
           'TypeWritter Effect',
           'Random Quote',
@@ -49,19 +49,20 @@ const appitemcard = [
           'API Fetch',
           'Twaliwind CSS',
           'JS',
-          'PasteApp',
+          'Random-Quote-Generator',
         ],
     },
     {
-        iframeSrc: 'https://paste-app-gilt-two.vercel.app',
-        imgSrc: '/images/MyAppItem/PasteApp.png',
-        label: 'PasteApp',
-        desc: 'Vite Ract JS App',
+        iframeSrc: 'https://stopwatch-lac-nu.vercel.app/',
+        imgSrc: '/images/MyAppItem/StopWatch.png',
+        label: 'StopWatch',
+        desc: 'Vite React JS App Basic StopWatch App with Start, Stop, Reset functionalities',
         tags: [
           'Vite',
           'Raect',
           'JS',
-          'PasteApp',
+          'Tailwind CSS',
+          'StopWatch',
         ],
     },
     {
@@ -76,7 +77,7 @@ const appitemcard = [
         'API Fetch',
         'Twaliwind CSS',
         'JS',
-        'PasteApp',
+        'Random-Quote-Generator',
       ],
     },
 ];
