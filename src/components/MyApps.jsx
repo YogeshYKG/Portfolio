@@ -26,6 +26,19 @@ import { Autoplay } from 'swiper/modules';
 
 const appitemcard = [
     {
+      iframeSrc: 'https://weather-app-ruddy-two-48.vercel.app/',
+      imgSrc: '/images/MyAppItem/Weather.png',
+      label: 'WeatherApp',
+      desc: 'Vite React JS App',
+      tags: [
+        'Vite',
+        'Raact',
+        'JS',
+        'WeatherApp',
+        'OpenWeatherMap API',
+      ],
+    },
+    {
       iframeSrc: 'https://paste-app-gilt-two.vercel.app',
       imgSrc: '/images/MyAppItem/PasteApp.png',
       label: 'PasteApp',
