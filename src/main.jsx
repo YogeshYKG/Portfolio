@@ -7,7 +7,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 /** Components */
-import App from './App.jsx'
+import VersionControl from './versioncontrol.jsx'
 
 /** Css Links */
 import './index.css'
@@ -15,6 +15,6 @@ import 'lenis/dist/lenis.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode basename="/Portfolio">
-    <App />
-  </StrictMode>,
+    <VersionControl />
+  </StrictMode>
 )
