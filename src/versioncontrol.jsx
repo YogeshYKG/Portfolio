@@ -2,7 +2,7 @@ import Version1 from './App.jsx';
 import Version2 from './version2.0/App.jsx';
 
 const VersionControl = () => {
-  const LoadVersion = Version1; // or Version2
+  const LoadVersion = Version2; // or Version2
 
   return (
     <>
