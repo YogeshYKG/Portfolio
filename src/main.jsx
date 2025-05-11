@@ -15,6 +15,7 @@ import 'lenis/dist/lenis.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode basename="/Portfolio">
+    {/* This Is Version 1.0 */}
     <App />
   </StrictMode>,
 )
